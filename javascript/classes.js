@@ -15,8 +15,14 @@
 // - color (String): the color of the bicycle
 // - manufacturer (String): the manufacturer of the bicycle
 class Bicycle {
-  // Replace this with your code
+  constructor(color, manufacturer) {
+    this.numWheels = 2
+    this.color = color
+    this.manufacturer = manufacturer
+  }
 }
+const bicycle = new Bicycle ('red', 'huffy')
+
 
 // This User class is intended to be used in a web application where users can
 // log in with a username and password.
@@ -34,9 +40,16 @@ class User {
   }
 
   processChangePassword(currentPassword, newPassword) {
-    // Replace this with your code
+    currentPassword = User.password
+    if (currentPassword === newPassword) {
+      return true
+    } else { 
+      return false
+    }
   }
 }
+// console.log(processChangePassword('god','dog'))
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 // This Book class is complete -- you don't need to change anything here. Instead,
 // you'll use it to implement two methods on the Library class below:
@@ -58,14 +71,19 @@ class Library {
     this.books = [];
   }
 
-  createAndAddBook(title, author) {
-    // Replace this with your code
+  createAndAddBook() {
+  //   const book = new Library(title, author)
   }
+  // console.log(createAndAddBook)
 
+  
+  
   findBooksByAuthor(author) {
-    // Replace this with your code
+    return this.books.filter(a => a.author === author)
   }
 }
+
+
 
 // You might be familiar with the fact that, in geometry, squares are rectangles
 // with four equal sides. In other words, Square is a subclass of Rectangle.
