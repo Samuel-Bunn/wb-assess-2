@@ -79,12 +79,12 @@ function evenShapes() {
     septagon: 7,
     octagon: 8,
   };
-  // for (let i = 0; i < shapes.length; i++) {
-  //   if 
-  // }
-
-  // return shapes;
-}
+//  for (const [key, value] of Object.entries(shapes)) {
+//   if (value % 2 === 1) {
+//     delete [shapes]value
+//   } 
+//  } return shapes
+} 
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -170,11 +170,11 @@ const shippingInfo = {
 // Using the Object.assign method, create a new object that combines the contactInfo and
 // shippingInfo objects and return it.
 function getHelensInfo() {
-  const newObj = Object.assign({}, contactInfo, ...shippingInfo)
-  
+  const newObj = Object.assign(shippingInfo, contactInfo)
+  return newObj
 }
-// console.log(getEllensInfo())
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// console.log(getHelensInfo())
+
 
 
 
@@ -194,7 +194,7 @@ function getZipAndState() {
   let {name, street, city, state, zipCode} = shippingInfo
   let zip = zipCode 
   let sta = state
-  return [zipCode, state]
+  return [zip, sta]
 }
 // console.log(getZipAndState())
 
